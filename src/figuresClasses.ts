@@ -47,7 +47,7 @@ export class Triangle implements Figure {
 export class Circle implements Figure {
   color: string;
 
-  shape: string;
+  shape: string = 'circle';
 
   radius: number;
 
@@ -68,7 +68,7 @@ export class Circle implements Figure {
 export class Rectangle implements Figure {
   color: string;
 
-  shape: 'rectangle';
+  shape:string =  'rectangle';
 
   a: number;
 
@@ -76,7 +76,7 @@ export class Rectangle implements Figure {
 
   constructor(color: string, a: number, b: number) {
     if (a <= 0 || b <= 0) {
-      throw new Error('All rectangles must be positive integer');
+      throw new Error('All sides must be positive integer');
     }
     this.color = color;
     this.shape = 'rectangle';
